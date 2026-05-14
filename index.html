@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAIN Online Programs - Build a Future-Ready Career</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#182865',
+            secondary: '#f5c518',
+            tertiary: '#f9fafb',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .font-heading {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .reveal-element {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.7s ease-out;
+    }
+
+    .reveal-element.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Faculty Carousel */
+    .faculty-carousel-container {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .faculty-carousel-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .faculty-card {
+      scroll-snap-align: center;
+      flex-shrink: 0;
+    }
+
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: full;
+      background-color: #d1d5db;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .carousel-dot.active {
+      width: 24px;
+      background-color: #182865;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body class="flex flex-col min-h-screen selection:bg-primary selection:text-white">
+  <!-- ================= HEADER ================= -->
+  <header class="w-full sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-3 font-bold font-heading text-primary">
+        <img src="./assets/brand/logo.png" alt="JAIN Online Logo" class="h-16 md:h-24" />
+      </a>
+
+      <nav class="hidden lg:flex space-x-6 items-center text-primary font-bold text-sm tracking-wider">
+        <a href="#programs" class="hover:text-primary/70 transition-colors">Programs</a>
+        <a href="#academic-approach" class="hover:text-primary/70 transition-colors text-nowrap">Academic Approach</a>
+        <a href="#rankings" class="hover:text-primary/70 transition-colors">Ranking</a>
+        <a href="#faculty" class="hover:text-primary/70 transition-colors">Faculty</a>
+        <a href="#admission-process" class="hover:text-primary/70 transition-colors text-nowrap">Admission Process</a>
+        <a href="#faq" class="hover:text-primary/70 transition-colors">Faq's</a>
+      </nav>
+
+      <nav class="flex items-center">
+        <a href="#applyNow"
+          class="bg-primary text-white px-6 py-3 md:py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-primary/95 transition-all shadow-md active:scale-95">
+          Apply Now
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO OPTION 1: LIGHT 50/50 SPLIT (Original) ================= -->
+  <!-- This is your initial 50/50 hero design, kept here as an alternate option -->
+  <section class="flex w-full py-20 bg-tertiary relative overflow-hidden">
+
+    <!-- Abstract Background Elements -->
+    <div
+      class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3">
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4">
+    </div>
+
+    <div class="w-full container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-10">
+        <!-- Text Left -->
+        <div class="flex-1 text-center lg:text-left">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 text-primary border border-primary/10 font-bold text-sm mb-8 shadow-sm reveal-element">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Admissions Open 2026
+          </div>
+          <h1
+            class="text-[44px] md:text-[60px] lg:text-[72px] font-bold text-primary leading-[1.05] mb-6 tracking-tight font-heading text-center lg:text-left">
+            AI-Driven<br />Online <span class="text-primary relative whitespace-nowrap">Degrees
+              <svg class="absolute left-0 -bottom-2 w-full h-4 text-secondary/50" viewBox="0 0 200 12"
+                preserveAspectRatio="none" fill="currentColor">
+                <path d="M0,10 Q50,0 100,10 T200,10 L200,12 L0,12 Z" />
+              </svg>
+            </span>
+          </h1>
+          <p
+            class="text-[18px] md:text-[22px] text-gray-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-inter text-center lg:text-left">
+            Globally recognized online degrees designed for working professionals. Upgrade your career with flexible,
+            AI-enhanced learning.
+          </p>
+          <div class="flex flex-row flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-6">
+            <a href="#applyNow"
+              class="px-5 md:px-8 py-3 md:py-4 bg-primary text-white rounded-full font-bold text-sm md:text-base hover:bg-primary/95 transition-all hover:-translate-y-1 active:scale-95 shadow-lg whitespace-nowrap">
+              Apply Now
+            </a>
+            <a href="#admission-process"
+              class="px-5 md:px-8 py-3 md:py-4 border-2 border-primary text-primary bg-white rounded-full font-bold text-sm md:text-base hover:bg-primary/5 transition-all hover:-translate-y-1 active:scale-95 whitespace-nowrap">
+              Explore Programs
+            </a>
+            <div
+              class="flex items-center gap-4 text-sm font-semibold text-gray-600 bg-white px-5 py-3 rounded-full shadow-sm border border-gray-100">
+              <div class="flex -space-x-3">
+                <img class="w-8 h-8 rounded-full border-2 border-white object-cover"
+                  src="https://i.pravatar.cc/100?img=1" alt="Student">
+                <img class="w-8 h-8 rounded-full border-2 border-white object-cover"
+                  src="https://i.pravatar.cc/100?img=2" alt="Student">
+                <img class="w-8 h-8 rounded-full border-2 border-white object-cover"
+                  src="https://i.pravatar.cc/100?img=3" alt="Student">
+                <div
+                  class="w-8 h-8 rounded-full border-2 border-white bg-secondary/20 flex items-center justify-center text-[10px] text-primary font-bold">
+                  +300K</div>
+              </div>
+              <span>Enrolled</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Graphic Area -->
+        <div class="flex-1 w-full max-w-xl lg:max-w-lg relative mt-10 lg:mt-0">
+          <!-- Main Image Container -->
+          <div
+            class="rounded-2xl shadow-2xl shadow-primary/20 relative overflow-hidden bg-white aspect-[4/5] transform transition-transform duration-500 border-8 border-white">
+            <img src="./assets/hero/hero-banner.png" alt="Hero Banner" class="w-full h-full object-cover z-10" />
+            <!-- Subtle overlay gradient -->
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent z-20 pointer-events-none">
+            </div>
+          </div>
+
+          <!-- Floating Badge 1 -->
+          <div
+            class="absolute -bottom-6 -left-6 lg:-left-10 bg-white p-4 rounded-2xl shadow-xl z-30 flex items-center gap-4 animate-[bounce_4s_infinite]">
+            <img class="w-10 h-10 rounded-full" src="https://i.pravatar.cc/100?img=5" alt="Mentor">
+            <div>
+              <p class="text-black font-bold text-sm">Industry Experts</p>
+              <p class="text-black text-xs">200+ Mentors</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= PROGRAMS OFFERED ================= -->
+  <section class="py-20 bg-tertiary" id="programs">
+    <div class="container mx-auto px-6 md:px-8 lg:px-12">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal-element visible">
+        <p class="text-primary tracking-[0.2em] text-xs md:text-sm font-bold uppercase mb-4">
+          Our Programs
+        </p>
+        <h2 class="text-primary font-bold text-[32px] md:text-[40px] font-heading leading-tight">Explore Our Online
+          Programs</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- MBA -->
+        <div
+          class="bg-white rounded-2xl shadow-[0_2px_15px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 reveal-element overflow-hidden flex flex-col group border border-gray-200 hover:border-primary/5 max-w-[360px] mx-auto lg:max-w-none w-full">
+          <div class="w-full relative h-48 overflow-hidden flex items-center justify-center">
+            <img src="./assets/programs/mba_plain.png" alt="MBA Program"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div class="p-8 flex flex-col flex-1">
+            <div class="flex items-center gap-2 mb-4">
+              <span
+                class="bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">Post
+                Graduate</span>
+            </div>
+            <h3
+              class="text-[22px] font-bold font-heading text-primary mb-4 leading-tight group-hover:text-primary/90 transition-colors">
+              MBA (Master of Business Administration)</h3>
+            <p class="text-gray-500 text-sm mb-8 flex-1 leading-relaxed">Build business and leadership skills with an
+              online MBA program designed for working professionals.</p>
+            <a href="#applyNow"
+              class="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold font-heading rounded-xl px-6 py-4 hover:bg-primary/95 transition-all shadow-md w-full active:scale-[0.98]">
+              Know More &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- MCA -->
+        <div
+          class="bg-white rounded-2xl shadow-[0_2px_15px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 reveal-element overflow-hidden flex flex-col group border border-gray-200 hover:border-primary/5 max-w-[360px] mx-auto lg:max-w-none w-full">
+          <div class="w-full relative h-48 overflow-hidden flex items-center justify-center">
+            <img src="./assets/programs/mca_plain.png" alt="MCA Program"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div class="p-8 flex flex-col flex-1">
+            <div class="flex items-center gap-2 mb-4">
+              <span
+                class="bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">Post
+                Graduate</span>
+            </div>
+            <h3
+              class="text-[22px] font-bold font-heading text-primary mb-4 leading-tight group-hover:text-primary/90 transition-colors">
+              MCA (Master of Computer Applications)</h3>
+            <p class="text-gray-500 text-sm mb-8 flex-1 leading-relaxed">Develop advanced technical skills with an
+              online MCA program focused on modern technologies.</p>
+            <a href="#applyNow"
+              class="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold font-heading rounded-xl px-6 py-4 hover:bg-primary/95 transition-all shadow-md w-full active:scale-[0.98]">
+              Know More &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- M.Com -->
+        <div
+          class="bg-white rounded-2xl shadow-[0_2px_15px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 reveal-element overflow-hidden flex flex-col group border border-gray-200 hover:border-primary/5 max-w-[360px] mx-auto lg:max-w-none w-full">
+          <div class="w-full relative h-48 overflow-hidden flex items-center justify-center">
+            <img src="./assets/programs/mcom_plain.png" alt="M.Com Program"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          </div>
+          <div class="p-8 flex flex-col flex-1">
+            <div class="flex items-center gap-2 mb-4">
+              <span
+                class="bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">Post
+                Graduate</span>
+            </div>
+            <h3
+              class="text-[22px] font-bold font-heading text-primary mb-4 leading-tight group-hover:text-primary/90 transition-colors">
+              M.Com (Master of Commerce)</h3>
+            <p class="text-gray-500 text-sm mb-8 flex-1 leading-relaxed">Advance your knowledge in commerce and finance.
+            </p>
+            <a href="#applyNow"
+              class="inline-flex items-center justify-center gap-2 bg-primary text-white font-bold font-heading rounded-xl px-6 py-4 hover:bg-primary/95 transition-all shadow-md w-full active:scale-[0.98]">
+              Know More &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= OUR ACADEMIC APPROACH ================= -->
+  <section class="py-24 bg-white relative" id="academic-approach">
+    <div class="absolute right-0 top-1/4 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-50 pointer-events-none">
+    </div>
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+      <div class="text-center mb-16 reveal-element">
+        <p class="text-primary tracking-[0.2em] text-xs md:text-sm font-bold uppercase mb-4">
+          Academic Approach
+        </p>
+        <h2 class="text-primary font-bold text-[32px] md:text-[40px] font-heading leading-tight mb-4">Our Academic
+          Approach</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">A dynamic learning methodology tailored for the modern
+          professional.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <!-- Item 1 -->
+        <div
+          class="flex flex-col items-start text-left reveal-element bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:border-primary/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30 transition-transform">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+              <line x1="16" x2="16" y1="2" y2="6" />
+              <line x1="8" x2="8" y1="2" y2="6" />
+              <line x1="3" x2="21" y1="10" y2="10" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-primary mb-2">Weekend Live Classes</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Engage with expert faculty during live weekend sessions
+            designed perfectly around your busy work schedule.</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div
+          class="flex flex-col items-start text-left reveal-element bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30  transition-transform">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-primary mb-2">Case Studies & Learn-by-Doing</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Focus on practical applications and real-world scenarios
+            rather than traditional rote memorization.</p>
+        </div>
+
+        <!-- Item 3 -->
+        <div
+          class="flex flex-col items-start text-left reveal-element bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30 transition-transform">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-primary mb-2">Personalised 1:1 Mentorship</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Get tailored guidance and career advice from industry
+            veterans dedicated to your professional growth.</p>
+        </div>
+
+        <!-- Item 4 -->
+        <div
+          class="flex flex-col items-start text-left reveal-element bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30  transition-transform">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+              <path d="M10 9l5 3-5 3V9z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-primary mb-2">JO — AI Learning Companion</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Experience smart, adaptive learning powered by JO, our AI
+            assistant that tracks and optimizes your progress.</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div
+          class="flex flex-col items-start text-left reveal-element bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30 transition-transform">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 20h9" />
+              <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-primary mb-2">Flexible Assessments</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Take exams and complete assignments on your own time with
+            our
+            robust, highly flexible evaluation model.</p>
+        </div>
+
+        <!-- Item 6 -->
+        <div
+          class="flex flex-col items-start text-left reveal-element bg-white p-8 rounded-2xl shadow-sm border-2 border-gray-100 hover:border-primary/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+          <div
+            class="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/30  transition-transform">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-heading text-primary mb-2">Dedicated Batch Owner Support</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">Never feel lost. Your dedicated batch owner will assist you
+            with academic queries throughout your journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ================= RANKINGS & RECOGNITIONS ================= -->
+  <section class="py-20 bg-tertiary overflow-hidden" id="rankings">
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 text-center reveal-element">
+      <div class="text-center mb-16 reveal-element">
+        <h2 class="text-primary font-bold text-[32px] md:text-[40px] font-heading leading-tight mb-4">Rankings and
+          Recognitions</h2>
+        <p class="text-gray-600">Our excellence is validated by the highest accreditation and ranking bodies in India.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+        <article
+          class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+          <div class="h-[100px] mb-6 flex items-center justify-center w-full">
+            <img src="./assets/recognitions/naac-rating.png" alt="NAAC A++" class="max-h-full w-auto object-contain" />
+          </div>
+          <p class="font-medium text-sm text-gray-800 leading-snug">Accredited by NAAC with an 'A++' grade</p>
+        </article>
+
+        <article
+          class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+          <div class="h-[100px] mb-6 flex items-center justify-center w-full">
+            <img src="./assets/recognitions/aicte-approval.webp" alt="AICTE" class="max-h-full w-auto object-contain" />
+          </div>
+          <p class="font-medium text-sm text-gray-800 leading-snug">BBA, MBA, BCA and MCA Programs are approved by AICTE
+          </p>
+        </article>
+
+        <article
+          class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+          <div class="h-[100px] mb-6 flex items-center justify-center w-full">
+            <img src="./assets/recognitions/qs-ranking.webp" alt="QS World Rankings"
+              class="max-h-full w-auto object-contain" />
+          </div>
+          <p class="font-medium text-sm text-gray-800 leading-snug">Ranked among the top Indian Universities by QS World
+            University Rankings</p>
+        </article>
+
+        <article
+          class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+          <div class="h-[100px] mb-6 flex items-center justify-center w-full">
+            <img src="./assets/recognitions/wes-accreditation.webp" alt="WES"
+              class="max-h-full w-auto object-contain" />
+          </div>
+          <p class="font-medium text-sm text-gray-800 leading-snug">Accredited by WES and recognized in the USA and
+            Canada</p>
+        </article>
+
+        <article
+          class="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg hover:-translate-y-1 transition-all">
+          <div class="h-[100px] mb-6 flex items-center justify-center w-full">
+            <img src="./assets/recognitions/ksurf-rating.webp" alt="KSURF" class="max-h-full w-auto object-contain" />
+          </div>
+          <p class="font-medium text-sm text-gray-800 leading-snug">Awarded 5 Star Rating by Karnataka State Higher
+            Education Council under KSURF</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- ================= MICRO-CREDENTIALS (THEME REDESIGN) ================= -->
+  <section class="py-24 lg:py-32 bg-primary relative overflow-hidden text-white" id="micro-credentials">
+    <!-- Immersive Mesh Gradients -->
+    <div
+      class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-400/10 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/4 pointer-events-none">
+    </div>
+    <div
+      class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px] translate-y-1/2 -translate-x-1/4 pointer-events-none">
+    </div>
+
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+      <!-- Header Area -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-20">
+        <div class="max-w-3xl reveal-element">
+          <p
+            class="text-white tracking-[0.2em] text-xs md:text-sm font-bold uppercase bg-white/10 px-4 py-1.5 rounded-full inline-block mb-6">
+            Micro-Credentials
+          </p>
+          <h2 class="text-[32px] md:text-[40px] font-bold font-heading leading-tight mb-8">
+            Proof of Skills <br />
+            <span class="text-white">
+              &gt; Proof of Marks
+            </span>
+          </h2>
+          <p class="text-slate-400 text-lg md:text-xl leading-relaxed font-light">
+            Most degrees give you depth in one direction. <span class="text-white font-medium">Micro-Credentials give
+              you something more</span> — access to advanced domains delivered by the practitioners shaping these
+            fields.
+          </p>
+        </div>
+
+        <div class="lg:w-1/4 reveal-element" style="transition-delay: 200ms;">
+          <div class="p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10">
+            <p class=" text-white/50 font-bold text-[10px] uppercase tracking-widest mb-6">Powered By</p>
+            <div class="grid grid-cols-2 lg:grid-cols-1 gap-6 items-center">
+              <img src="./assets/micro-credentials/partner-logo-1.webp" alt="Partner"
+                class="h-8 w-auto object-contain brightness-0 invert transition-opacity">
+              <img src="./assets/micro-credentials/partner-logo-2.webp" alt="Partner"
+                class="h-8 w-auto object-contain brightness-0 invert transition-opacity">
+              <img src="./assets/micro-credentials/partner-logo-3.webp" alt="Partner"
+                class="h-8 w-auto object-contain brightness-0 invert transition-opacity">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pathways Comparison -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
+
+        <!-- Pathway 01 -->
+        <article
+          class="group relative p-10 md:p-12 rounded-2xl bg-white/10 border border-white/10 hover:border-white/30 transition-all duration-500 reveal-element">
+          <div class="absolute top-0 right-0 p-8">
+            <span
+              class="text-7xl md:text-9xl font-bold font-heading text-white/5 italic leading-none group-hover:text-white/10 transition-colors">01</span>
+          </div>
+
+          <div class="relative z-10">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest mb-8">
+              <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+              Pathway 01
+            </div>
+
+            <h3 class="text-3xl md:text-4xl font-bold font-heading mb-6 leading-tight">
+              Semester-Embedded <br />
+              <span class="italic font-serif text-white underline decoration-white/30 underline-offset-8">MCC</span>
+            </h3>
+
+            <p class="text-slate-400 text-base leading-relaxed mb-10 max-w-sm">
+              A curated basket of courses integrated into your degree each semester. A structured entry point into
+              cross-domain learning.
+            </p>
+
+            <div class="space-y-4 pt-8 border-t border-white/10">
+              <div class="flex items-center gap-4">
+                <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3"
+                    viewBox="0 0 24 24">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <span class="text-white font-medium">2 Credits per Semester</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3"
+                    viewBox="0 0 24 24">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <span class="text-white font-medium">No Additional Cost</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Pathway 02 -->
+        <article
+          class="group relative p-10 md:p-12 rounded-2xl bg-gradient-to-br from-white/10 to-transparent border border-white/10 hover:border-white/30 transition-all duration-500 reveal-element"
+          style="transition-delay: 200ms;">
+          <div class="absolute top-0 right-0 p-8">
+            <span
+              class="text-7xl md:text-9xl font-bold font-heading text-white/5 italic leading-none group-hover:text-white/10 transition-colors">02</span>
+          </div>
+
+          <div class="relative z-10">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest mb-8">
+              <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+              Pathway 02
+            </div>
+
+            <h3 class="text-3xl md:text-4xl font-bold font-heading mb-6 leading-tight">
+              Centre for <span
+                class="italic font-serif text-white underline decoration-white/30 underline-offset-8">Skills</span>
+              <br />
+              <span class="text-lg font-normal text-slate-400">— JAIN University</span>
+            </h3>
+
+            <p class="text-slate-400 text-base leading-relaxed mb-10 max-w-sm">
+              Access a full catalogue of 100+ courses spanning advanced domains. Learn freely at your own pace each
+              semester.
+            </p>
+
+            <div class="space-y-4 pt-8 border-t border-white/10">
+              <div class="flex items-center gap-4">
+                <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3"
+                    viewBox="0 0 24 24">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <span class="text-white font-medium">100+ Courses Available</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3"
+                    viewBox="0 0 24 24">
+                    <path d="M5 13l4 4L19 7"></path>
+                  </svg>
+                </div>
+                <span class="text-white font-medium">Make Your Own Path</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FACULTY & INDUSTRY EXPERTS ================= -->
+  <section class="py-24 bg-tertiary border-t border-gray-100" id="faculty">
+    <div class="container mx-auto px-6 md:px-8 lg:px-12">
+      <div class="text-center mb-16 reveal-element">
+        <p class="text-primary tracking-[0.2em] text-xs md:text-sm font-bold uppercase mb-4">Learn from the Best</p>
+        <h2 class="text-primary font-bold text-[32px] md:text-[40px] font-heading leading-tight mb-4">
+          Faculty & Industry Experts
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">Our faculty combines decades of academic excellence with
+          real-world industry experience.</p>
+      </div>
+
+      <div class="relative overflow-hidden">
+        <div id="facultyCarousel"
+          class="flex lg:grid lg:grid-cols-4 gap-6 overflow-x-auto lg:overflow-x-visible hide-scrollbar reveal-element">
+          <!-- Faculty 1 -->
+          <div
+            class="faculty-card min-w-full md:min-w-[calc(50%-12px)] lg:min-w-0 max-w-[360px] mx-auto lg:max-w-none bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:border-primary/20 hover:shadow-xl transition-all duration-300 flex flex-col group/card">
+            <div class="h-56 relative overflow-hidden bg-primary/5">
+              <img src="./assets/faculty/babith.png" alt="Navdeep Singh"
+                class="w-full h-full object-cover object-top group-hover/card:scale-105 transition-transform duration-700">
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold font-heading text-lg text-primary">Navdeep Singh</h3>
+                <img src="./assets/faculty/adobe.png" alt="Adobe" class="h-5 object-contain">
+              </div>
+              <p class="text-black font-bold text-xs uppercase tracking-wider mb-4">Software Engineer</p>
+              <p class="text-sm text-gray-500 mb-6 flex-1 leading-relaxed">Led AI-driven customer experience platforms
+                across global markets.</p>
+              <div class="mt-auto">
+                <span class="inline-block bg-primary/5 text-primary font-semibold text-xs rounded-full px-4 py-1.5">AI &
+                  Product</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Faculty 2 -->
+          <div
+            class="faculty-card min-w-full md:min-w-[calc(50%-12px)] lg:min-w-0 max-w-[360px] mx-auto lg:max-w-none bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:border-primary/20 hover:shadow-xl transition-all duration-300 flex flex-col group/card">
+            <div class="h-56 relative overflow-hidden bg-primary/5">
+              <img src="./assets/faculty/aditya.png" alt="Aditya Jain"
+                class="w-full h-full object-cover object-top group-hover/card:scale-105 transition-transform duration-700">
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold font-heading text-lg text-primary">Aditya Jain</h3>
+                <img src="./assets/faculty/zeta.png" alt="Zeta" class="h-5 object-contain">
+              </div>
+              <p class="text-black font-bold text-xs uppercase tracking-wider mb-4">Senior Product Manager</p>
+              <p class="text-sm text-gray-500 mb-6 flex-1 leading-relaxed">Drives high-impact digital transformation at
+                Zeta.</p>
+              <div class="mt-auto">
+                <span
+                  class="inline-block bg-primary/5 text-primary font-semibold text-xs rounded-full px-4 py-1.5">Product
+                  Strategy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Faculty 3 -->
+          <div
+            class="faculty-card min-w-full md:min-w-[calc(50%-12px)] lg:min-w-0 max-w-[360px] mx-auto lg:max-w-none bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:border-primary/20 hover:shadow-xl transition-all duration-300 flex flex-col group/card">
+            <div class="h-56 relative overflow-hidden bg-primary/5">
+              <img src="./assets/faculty/neha.png" alt="Neha Pandey"
+                class="w-full h-full object-cover object-top group-hover/card:scale-105 transition-transform duration-700">
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold font-heading text-lg text-primary">Neha Pandey</h3>
+                <img src="./assets/faculty/microsoft.png" alt="Microsoft" class="h-5 object-contain">
+              </div>
+              <p class="text-black font-bold text-xs uppercase tracking-wider mb-4">Software Engineer II</p>
+              <p class="text-sm text-gray-500 mb-6 flex-1 leading-relaxed">Built and scaled robust software systems
+                across Microsoft enterprise products.</p>
+              <div class="mt-auto">
+                <span
+                  class="inline-block bg-primary/5 text-primary font-semibold text-xs rounded-full px-4 py-1.5">Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Faculty 4 -->
+          <div
+            class="faculty-card min-w-full md:min-w-[calc(50%-12px)] lg:min-w-0 max-w-[360px] mx-auto lg:max-w-none bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 hover:border-primary/20 hover:shadow-xl transition-all duration-300 flex flex-col group/card">
+            <div class="h-56 relative overflow-hidden bg-primary/5">
+              <img src="./assets/faculty/tahseen.png" alt="Tahseen Akram"
+                class="w-full h-full object-cover object-top group-hover/card:scale-105 transition-transform duration-700">
+            </div>
+            <div class="p-8 flex-1 flex flex-col">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="font-bold font-heading text-lg text-primary">Tahseen Akram</h3>
+                <img src="./assets/faculty/flipkart.png" alt="Flipkart" class="h-5 object-contain">
+              </div>
+              <p class="text-black font-bold text-xs uppercase tracking-wider mb-4">Software Engineer</p>
+              <p class="text-sm text-gray-500 mb-6 flex-1 leading-relaxed">Built and scaled large e-commerce platforms
+                at Flipkart.</p>
+              <div class="mt-auto">
+                <span
+                  class="inline-block bg-primary/5 text-primary font-semibold text-xs rounded-full px-4 py-1.5">E-Commerce
+                  Tech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Indicators (Hidden on Desktop) -->
+        <div class="flex lg:hidden justify-center items-center gap-3 mt-10" id="facultyDots">
+          <div class="carousel-dot active" data-index="0"></div>
+          <div class="carousel-dot" data-index="1"></div>
+          <div class="carousel-dot" data-index="2"></div>
+          <div class="carousel-dot" data-index="3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Faculty Carousel Script
+    const carousel = document.getElementById('facultyCarousel');
+    const dots = document.querySelectorAll('#facultyDots .carousel-dot');
+
+    if (carousel && dots.length > 0) {
+      const updateDots = () => {
+        // Only run carousel logic on mobile/tablet
+        if (window.innerWidth >= 1024) return;
+
+        const scrollPosition = carousel.scrollLeft;
+        const cardWidth = carousel.querySelector('.faculty-card').offsetWidth + 24;
+        const activeIndex = Math.round(scrollPosition / cardWidth);
+
+        dots.forEach((dot, index) => {
+          if (index === activeIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      };
+
+      carousel.addEventListener('scroll', updateDots);
+
+      // Click on dots to scroll
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          if (window.innerWidth >= 1024) return;
+          const cardWidth = carousel.querySelector('.faculty-card').offsetWidth + 24;
+          carousel.scrollTo({
+            left: index * cardWidth,
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Handle window resize to reset carousel if needed
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) {
+          carousel.scrollTo({ left: 0 });
+        }
+      });
+    }
+  </script>
+
+  <!-- ================= LINKEDIN LEARNING EXCLUSIVE ================= -->
+  <section class="py-20 bg-white text-black relative overflow-hidden">
+    <!-- <div
+      class="absolute -right-20 -top-20 w-[400px] h-[400px] border-[40px] border-white/5 rounded-full pointer-events-none">
+    </div>
+    <div
+      class="absolute -left-20 -bottom-20 w-[300px] h-[300px] border-[40px] border-white/5 rounded-full pointer-events-none">
+    </div> -->
+
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+      <div
+        class="flex flex-col lg:flex-row items-center gap-12 bg-primary text-white  border border-white/20 p-10 md:p-16 rounded-2xl backdrop-blur-sm reveal-element">
+        <div class="flex-1">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0a66c2]/20 text-white border border-[#0a66c2]/30 text-xs md:text-sm font-bold uppercase tracking-[0.2em] mb-6">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            EXCLUSIVE ACCESS
+          </div>
+          <h2 class="text-[32px] md:text-[40px] font-bold font-heading leading-tight mb-6">Unlock 20,000+ Courses on
+            LinkedIn Learning</h2>
+          <p class="text-white/80 text-lg leading-relaxed mb-8 max-w-xl">
+            Get exclusive access to 20,000+ LinkedIn Learning courses across business, technology, leadership, and
+            more.
+            Unlike purchasing courses individually, these learning resources are included as part of your program,
+            giving students access to structured skill development without additional cost.
+          </p>
+          <ul class="space-y-4 mb-8">
+            <li class="flex items-start gap-3 text-white/90"><svg class="w-5 h-5 text-[#0a66c2] shrink-0 mt-1"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg> <span><strong>Curated for Your Program:</strong> Courses aligned with your degree subjects</span>
+            </li>
+            <li class="flex items-start gap-3 text-white/90"><svg class="w-5 h-5 text-[#0a66c2] shrink-0 mt-1"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg> <span><strong>Integrated Learning:</strong> Develop professional skills alongside
+                coursework</span>
+            </li>
+            <li class="flex items-start gap-3 text-white/90"><svg class="w-5 h-5 text-[#0a66c2] shrink-0 mt-1"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg> <span><strong>Included in Your Program:</strong> Access without purchasing courses
+                separately</span></li>
+            <li class="flex items-start gap-3 text-white/90"><svg class="w-5 h-5 text-[#0a66c2] shrink-0 mt-1"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg> <span><strong>Career-Focused Skills:</strong> Build capabilities valued by employers</span></li>
+          </ul>
+          <a href="#applyNow"
+            class="inline-flex items-center gap-2 bg-white text-[#0a66c2] font-bold rounded-full px-8 py-4 hover:bg-white/90 transition-all shadow-lg active:scale-[0.98]">
+            Unlock Exclusive Access
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+        <div class="flex-1 w-full">
+          <div class=" rounded-2xl p-4 shadow-2xl relative  transition-transform">
+            <img src="./assets/linkedin/linkedin-featured.png" class="rounded-xl w-full h-auto object-contain"
+              alt="LinkedIn Learning" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= OUR PLACEMENT NUMBERS ================= -->
+  <section class="py-20 bg-primary text-white relative">
+    <div class="absolute inset-0 bg-primary/20 opacity-50"></div>
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+      <div class="text-center mb-16 reveal-element">
+        <h2 class="font-bold text-[32px] md:text-[40px] font-heading leading-tight mb-4">Results That Define Us</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg">Every number reflects a learner we've helped move forward.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto reveal-element">
+        <div
+          class="text-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:-translate-y-1 transition-transform">
+          <p class="text-4xl md:text-5xl font-bold font-heading text-white mb-2">2000+</p>
+          <p class="text-xs md:text-sm text-gray-300  tracking-widest">Hiring Corporates</p>
+        </div>
+        <div
+          class="text-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:-translate-y-1 transition-transform">
+          <p class="text-4xl md:text-5xl font-bold font-heading text-white mb-2">65%</p>
+          <p class="text-xs md:text-sm text-gray-300 tracking-widest">Average Salary Hike</p>
+        </div>
+        <div
+          class="text-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:-translate-y-1 transition-transform">
+          <p class="text-4xl md:text-5xl font-bold font-heading text-white mb-2">78%</p>
+          <p class="text-xs md:text-sm text-gray-300 tracking-widest">Career Success Rate</p>
+        </div>
+        <div
+          class="text-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:-translate-y-1 transition-transform">
+          <p class="text-4xl md:text-5xl font-bold font-heading text-white mb-2">15,454+</p>
+          <p class="text-xs md:text-sm text-gray-300 tracking-widest">Jobs Facilitated</p>
+        </div>
+        <div
+          class="text-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:-translate-y-1 transition-transform">
+          <p class="text-4xl md:text-5xl font-bold font-heading text-white mb-2">80%</p>
+          <p class="text-xs md:text-sm text-gray-300 tracking-widest">Resolution Rate Within 24hrs</p>
+        </div>
+        <div
+          class="text-center p-6 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-sm hover:-translate-y-1 transition-transform">
+          <p class="text-4xl md:text-5xl font-bold font-heading text-white mb-2">84%</p>
+          <p class="text-xs md:text-sm text-gray-300 tracking-widest">Course Completion Success</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= OUR ALUMNI WORK HERE ================= -->
+  <section class="py-16 bg-white border-t border-gray-100">
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 text-center">
+      <div class="reveal-element">
+        <h2 class="text-primary font-bold text-[32px] md:text-[40px] font-heading leading-tight mb-4">Our Alumni Work
+          Here</h2>
+        <p class="text-gray-500 max-w-2xl mx-auto text-lg mb-10">Our graduates are placed at India's and the world's top
+          companies.</p>
+      </div>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 container mx-auto mt-10 reveal-element"
+        style="transition-delay: 100ms;">
+        <img src="./assets/employers/google.svg" alt="Google"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/amazon.svg" alt="Amazon"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/microsoft.svg" alt="Microsoft"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/flipkart.svg" alt="Flipkart"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/infosys.svg" alt="Infosys"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/wipro.svg" alt="Wipro"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/tcs.svg" alt="TCS"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/deloitte.png" alt="Deloitte"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/ibm.svg" alt="IBM"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/hdfc.svg" alt="HDFC Bank"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/paytm.svg" alt="Paytm"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/uber.png" alt="Uber"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/zomato.png" alt="Zomato"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/phonepe.svg" alt="PhonePe"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/meta.svg" alt="Meta"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/cognizant.svg" alt="Cognizant"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/accenture.svg" alt="Accenture"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+        <img src="./assets/employers/jio.svg" alt="Reliance Jio"
+          class="max-h-[38px] max-w-[100px] object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ================= IMPACTFUL MINDS ================= -->
+  <section class="py-24 bg-tertiary text-black">
+    <div class="container mx-auto px-6 md:px-8 lg:px-12">
+      <div class="text-center mb-16 reveal-element">
+
+        <h2 class="text-primary font-bold text-[32px] md:text-[40px] font-heading leading-tight mb-4">
+          In the Presence of Impactful Minds
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">Your JAIN degree connects you to India's most influential
+          leaders and thinkers through exclusive live sessions.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto reveal-element">
+        <div
+          class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="overflow-hidden h-56">
+            <img src="./assets/impactful-minds/nirmala-sitharaman.webp" alt="Nirmala Sitharaman"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <h3 class="font-bold text-2xl text-primary font-heading">Nirmala Sitharaman</h3>
+            <div class="w-12 h-1 bg-secondary my-4 rounded-full"></div>
+            <p class="text-black font-bold text-xs uppercase tracking-wider mb-4">Finance Minister, India</p>
+            <p class="text-gray-600 text-base italic leading-relaxed">"Union Finance Minister Smt. Nirmala Sitharaman
+              engaged with JAIN Online learners on India's growth and the Digital Revolution."</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col group">
+          <div class="overflow-hidden h-56">
+            <img src="./assets/impactful-minds/yaduveer-wadiyar.webp" alt="Maharaja Yaduveer Wadiyar"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+          </div>
+          <div class="p-8">
+            <h3 class="font-bold text-2xl text-primary font-heading">Maharaja Yaduveer Wadiyar</h3>
+            <div class="w-12 h-1 bg-secondary my-4 rounded-full"></div>
+            <p class="text-black font-bold text-xs uppercase tracking-wider mb-4">Member of Parliament, India</p>
+            <p class="text-gray-600 text-base italic leading-relaxed">"Towards a sustainable environment — an
+              exclusive
+              interaction with Maharaja Yaduveer Wadiyar for JAIN Online learners."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= ALUMNI SPEAK ================= -->
+  <section class="py-24 bg-gradient-to-br from-[#0F1B45] to-[#1B2C6B]" id="alumni">
+    <div class="container mx-auto px-6 md:px-8 lg:px-12">
+      <div class="text-center mb-16 reveal-element">
+        <h2 class="font-heading text-[32px] md:text-[40px] font-bold text-white mb-4">Alumni Speak</h2>
+        <p class="text-white/60 max-w-2xl mx-auto text-lg">Hear what our learners say about their Jain Online
+          journey</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Testimonial 1 -->
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 flex flex-col max-w-[360px] mx-auto lg:max-w-none w-full">
+          <div class="mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="text-secondary">
+              <path d="M10 11L8.5 16H5L6.5 11H5V7H10V11ZM19 11L17.5 16H14L15.5 11H14V7H19V11Z" fill="currentColor">
+              </path>
+            </svg>
+          </div>
+          <div class="flex gap-1 mb-4">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+          </div>
+          <p class="text-white/90 text-sm italic leading-relaxed mb-6 flex-1">"The live sessions and mentorship
+            completely changed how I approach business problems. Best investment I've made in my career."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <img src="./assets/testimonials/anirudh.webp" alt="Anirudh Chand"
+              class="w-11 h-11 rounded-full object-cover flex-shrink-0 border-2 border-secondary/20">
+            <div>
+              <div class="text-white font-bold text-sm">Anirudh Chand</div>
+              <div class="text-white/70 text-xs">MBA – HR & Finance</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 flex flex-col max-w-[360px] mx-auto lg:max-w-none w-full">
+          <div class="mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="text-secondary">
+              <path d="M10 11L8.5 16H5L6.5 11H5V7H10V11ZM19 11L17.5 16H14L15.5 11H14V7H19V11Z" fill="currentColor">
+              </path>
+            </svg>
+          </div>
+          <div class="flex gap-1 mb-4">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+          </div>
+          <p class="text-white/90 text-sm italic leading-relaxed mb-6 flex-1">"Flexible schedule helped me study
+            while working full-time. The faculty were incredibly supportive throughout."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <img src="./assets/testimonials/debasmita.webp" alt="Debashrita Ray"
+              class="w-11 h-11 rounded-full object-cover flex-shrink-0 border-2 border-secondary/20">
+            <div>
+              <div class="text-white font-bold text-sm">Debashrita Ray</div>
+              <div class="text-white/70 text-xs">BA</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 flex flex-col max-w-[360px] mx-auto lg:max-w-none w-full">
+          <div class="mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="text-secondary">
+              <path d="M10 11L8.5 16H5L6.5 11H5V7H10V11ZM19 11L17.5 16H14L15.5 11H14V7H19V11Z" fill="currentColor">
+              </path>
+            </svg>
+          </div>
+          <div class="flex gap-1 mb-4">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+          </div>
+          <p class="text-white/90 text-sm italic leading-relaxed mb-6 flex-1">"I got promoted within 6 months of
+            completing my MBA. Jain Online truly delivers on its promise."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <img src="./assets/testimonials/hiba.webp" alt="Heba Kouser"
+              class="w-11 h-11 rounded-full object-cover flex-shrink-0 border-2 border-secondary/20">
+            <div>
+              <div class="text-white font-bold text-sm">Heba Kouser</div>
+              <div class="text-white/70 text-xs">MBA – HR & Finance</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div
+          class="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 flex flex-col max-w-[360px] mx-auto lg:max-w-none w-full">
+          <div class="mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="text-secondary">
+              <path d="M10 11L8.5 16H5L6.5 11H5V7H10V11ZM19 11L17.5 16H14L15.5 11H14V7H19V11Z" fill="currentColor">
+              </path>
+            </svg>
+          </div>
+          <div class="flex gap-1 mb-4">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="text-secondary">
+              <path
+                d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z">
+              </path>
+            </svg>
+          </div>
+          <p class="text-white/90 text-sm italic leading-relaxed mb-6 flex-1">"World-class curriculum,
+            industry-relevant projects, and a degree that actually opened doors for me."</p>
+          <div class="flex items-center gap-3 mt-auto">
+            <img src="./assets/testimonials/kalpita.webp" alt="Kalpita S"
+              class="w-11 h-11 rounded-full object-cover flex-shrink-0 border-2 border-secondary/20">
+            <div>
+              <div class="text-white font-bold text-sm">Kalpita S</div>
+              <div class="text-white/70 text-xs">MBA – Finance & Networking</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ================= ADMISSION PROCESS SECTION ================= -->
+  <div id="admission-process" class="w-full md:flex md:justify-center bg-white">
+    <div class="relative w-full">
+      <section class="w-full max-w-5xl flex flex-col mx-auto relative z-40 px-6 md:px-8 lg:px-12 py-24">
+
+        <div
+          class="sticky top-10 z-10 bg-white/80 backdrop-blur-md py-8 flex flex-col gap-4 items-center justify-center text-center reveal-element">
+          <p class="text-primary tracking-[0.2em] text-xs md:text-sm font-bold uppercase mb-2">
+            How to Enroll
+          </p>
+          <h2 class="text-primary font-bold text-[32px] md:text-[40px] font-heading leading-tight max-w-3xl">
+            Admission Process
+            for Program
+            <span class="relative inline-block text-primary">
+              Enrollment
+              <svg class="absolute left-0 -bottom-2 w-full h-3 text-primary/30" viewBox="0 0 200 12"
+                preserveAspectRatio="none" fill="none">
+                <path d="M2 8 Q 50 2, 100 6 T 198 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+              </svg>
+            </span>
+          </h2>
+        </div>
+
+        <div class="relative space-y-12 md:space-y-24" id="step-cards-host">
+          <!-- Central Line (desktop only) -->
+          <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 -translate-x-1/2 z-0"></div>
+
+          <!-- Step 1 -->
+          <div class="sticky top-48 md:top-64 w-[92%] md:w-full mx-auto z-10" data-i="1">
+            <div
+              class="bg-white rounded-2xl p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-200 transition-all duration-500 hover:shadow-[0_8px_40px_rgb(30,82,219,0.08)] hover:-translate-y-1">
+              <div class="flex flex-col md:flex-row items-start gap-6 md:gap-10">
+                <div
+                  class="bg-primary/10 text-primary rounded-2xl w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shrink-0">
+                  <span class="font-heading font-bold text-2xl md:text-3xl">01</span>
+                </div>
+                <div class="flex-1 pt-2">
+                  <p class="text-primary font-bold text-xs tracking-widest uppercase mb-2">Step 1</p>
+                  <h3 class="text-primary font-bold text-xl md:text-3xl leading-tight mb-4 font-heading">
+                    Submit Application
+                  </h3>
+                  <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl">
+                    Fill out the online application form with your personal, educational, and program details to
+                    begin
+                    your admission process smoothly.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="sticky top-52 md:top-72 w-[95%] md:w-full mx-auto z-20" data-i="2">
+            <div
+              class="bg-white rounded-2xl p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-200 transition-all duration-500 hover:shadow-[0_8px_40px_rgb(30,82,219,0.08)] hover:-translate-y-1">
+              <div class="flex flex-col md:flex-row items-start gap-6 md:gap-10">
+                <div
+                  class="bg-primary/10 text-primary rounded-2xl w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shrink-0">
+                  <span class="font-heading font-bold text-2xl md:text-3xl">02</span>
+                </div>
+                <div class="flex-1 pt-2">
+                  <p class="text-primary font-bold text-xs tracking-widest uppercase mb-2">Step 2</p>
+                  <h3 class="text-primary font-bold text-xl md:text-3xl leading-tight mb-4 font-heading">
+                    Enroll in Your Program
+                  </h3>
+                  <p class="text-gray-600 text-base md:text-lg leading-relaxed max-w-2xl">
+                    Select your preferred program from our wide range of UGC-entitled courses, verify your details,
+                    and
+                    proceed to confirm your enrollment.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="sticky top-56 md:top-80 w-[98%] md:w-full mx-auto z-30" data-i="3">
+            <div
+              class="bg-white rounded-2xl p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-200 transition-all duration-500 hover:shadow-[0_8px_40px_rgb(30,82,219,0.08)] hover:-translate-y-1">
+              <div class="flex flex-col md:flex-row items-start gap-6 md:gap-10">
+                <div
+                  class="bg-primary/10 text-primary rounded-2xl w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shrink-0">
+                  <span class="font-heading font-bold text-2xl md:text-3xl">03</span>
+                </div>
+                <div class="flex-1 pt-2">
+                  <p class="text-primary font-bold text-xs tracking-widest uppercase mb-2">Step 3</p>
+                  <h3 class="text-primary font-bold text-xl md:text-3xl leading-tight mb-4 font-heading">
+                    Complete Payment
+                  </h3>
+                  <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4 max-w-2xl">
+                    Choose a flexible payment option that suits your financial needs:
+                  </p>
+                  <ul class="space-y-3">
+                    <li class="flex items-start gap-3">
+                      <div
+                        class="mt-1 w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      <p class="text-gray-600 text-base"><strong class="text-primary">One-Time Payment:</strong> Pay
+                        the
+                        full program fee upfront and receive a special discount.</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <div
+                        class="mt-1 w-5 h-5 rounded-full bg-blue-100 text-primary flex items-center justify-center shrink-0">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      <p class="text-gray-600 text-base"><strong class="text-primary">Education Loan / EMI:</strong>
+                        Apply
+                        for financing and pay through easy monthly installments at 0% interest.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="sticky top-60 md:top-88 w-full z-40" data-i="4">
+            <div
+              class="bg-primary rounded-2xl p-8 md:p-12 shadow-xl shadow-primary/20 transition-all duration-500 hover:-translate-y-1 relative overflow-hidden">
+              <div
+                class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-2xl -translate-y-1/2 translate-x-1/3 pointer-events-none">
+              </div>
+
+              <div class="flex flex-col md:flex-row items-start gap-6 md:gap-10 relative z-10">
+                <div
+                  class="bg-white text-primary rounded-2xl w-16 h-16 md:w-20 md:h-20 flex items-center justify-center shrink-0 shadow-lg">
+                  <span class="font-heading font-bold text-2xl md:text-3xl">04</span>
+                </div>
+                <div class="flex-1 pt-2 text-white">
+                  <p class="text-blue-200 font-bold text-xs tracking-widest uppercase mb-2">Step 4</p>
+                  <h3 class="font-bold text-xl md:text-3xl leading-tight mb-4 font-heading">
+                    Secure Your Seat
+                  </h3>
+                  <p class="text-blue-50 text-base md:text-lg leading-relaxed mb-8 max-w-2xl">
+                    Once your payment is completed or financing is approved, your admission is confirmed and your
+                    seat
+                    is secured in the program.
+                  </p>
+
+                  <div
+                    class="bg-white/10 backdrop-blur-sm rounded-2xl p-5 md:p-6 border border-white/20 flex flex-col sm:flex-row items-center gap-5">
+                    <div
+                      class="bg-white text-primary rounded-full w-12 h-12 flex items-center justify-center shrink-0 shadow-sm">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                    </div>
+                    <p class="text-sm md:text-base flex-1 leading-snug">
+                      Your <strong>seat is confirmed</strong>! You will receive your login credentials, onboarding
+                      kit,
+                      and access to the learning portal within 48 hours.
+                    </p>
+                    <a href="#applyNow"
+                      class="bg-white text-primary font-bold rounded-full px-6 py-3 text-sm md:text-base whitespace-nowrap inline-flex items-center gap-2 hover:bg-gray-50 transition-colors shadow-sm">
+                      Apply Now
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section class="py-24 bg-tertiary border-t border-gray-100" id="faq">
+    <div class="container mx-auto px-6 md:px-8 lg:px-12 max-w-5xl">
+      <div class="text-center mb-16 reveal-element">
+        <p class="text-primary tracking-[0.2em] text-xs md:text-sm font-bold uppercase mb-4">
+          Faq's
+        </p>
+        <h2 class="text-primary font-bold text-[32px] md:text-[40px] font-heading leading-tight mb-4">Frequently
+          Asked
+          Questions</h2>
+      </div>
+
+      <div class="space-y-4 reveal-element" id="faq-container">
+        <!-- FAQs 1-5 (Always visible) -->
+        <!-- FAQ 1 -->
+        <details class="group bg-white rounded-2xl border border-gray-200 open:border-primary transition-colors">
+          <summary
+            class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+            1. Why choose JAIN Online?
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+            JAIN Online offers UGC-entitled degrees from JAIN (Deemed-to-be University), a NAAC A++ accredited
+            institution. We combine academic excellence with industry-relevant micro-credentials and 100% placement
+            assistance to ensure our learners are future-ready.
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+          <summary
+            class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+            2. What is the mode of learning?
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+            The programs are delivered 100% online through our advanced Learning Management System (LMS). This features
+            live interactive sessions, recorded lectures, digital course materials, and collaborative discussion forums.
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+          <summary
+            class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+            3. How many credits does the program have?
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+            Our degree programs follow UGC guidelines for credit distribution. Typically, our MBA and MCA programs
+            comprise between 80 to 100+ credits spread across four semesters.
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+          <summary
+            class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+            4. How is an online degree offered through JAIN Online different from correspondence, open or distance
+            learning modes?
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+            <p class="mb-4">An online degree offered through JAIN Online is delivered through a structured digital
+              ecosystem that includes live classes, multimedia learning resources, continuous assessments, and regular
+              learner and faculty interaction via a Learning Management System. This model enables guided learning, peer
+              collaboration, and real-time academic support, creating an interactive and technology-driven learning
+              experience.</p>
+            <p>Distance education, on the other hand, relies largely on self-study using printed or static digital
+              material with limited real-time engagement and academic support. A key distinction also lies in the
+              examination process - online programs conduct proctored examinations using secure technology-enabled
+              monitoring, while distance education typically requires learners to appear for center-based examinations
+              at authorized venues under in person invigilation.</p>
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+          <summary
+            class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+            5. What documents are required for admission?
+            <span class="transition group-open:rotate-180">
+              <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </summary>
+          <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+            You will generally need scanned copies of your 10th and 12th mark sheets, graduation certificates (for PG
+            programs), a valid government-issued ID proof (Aadhaar, PAN, or Passport), and recent passport-sized
+            photographs.
+          </div>
+        </details>
+
+        <!-- Hidden FAQs (6-15) -->
+        <div id="extra-faqs" class="hidden space-y-4">
+          <!-- FAQ 6 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              6. Is this online degree accepted by employers in India and abroad?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              Yes, UGC-entitled online degrees are fully recognized by government and private sector employers worldwide
+              for recruitment, promotions, and eligibility for competitive examinations.
+            </div>
+          </details>
+
+          <!-- FAQ 7 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              7. Can I use this degree for higher studies (PhD, MPhil, studies abroad)?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              Absolutely. An online degree from JAIN Online is legally equivalent to any on-campus degree, making you
+              eligible to pursue PhDs, MPhils, or higher education at prestigious international universities.
+            </div>
+          </details>
+
+          <!-- FAQ 8 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              8. What happens if I miss a live class?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              No worries. All live classes are recorded and uploaded to the Learning Management System within 24 hours.
+              You can revisit these recordings as many times as you need during your program.
+            </div>
+          </details>
+
+          <!-- FAQ 9 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              9. How are exams conducted and proctored?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              Exams are conducted online using an advanced AI-proctored system. This allows you to take your exams
+              safely from home while maintaining the highest levels of integrity through webcam monitoring and browser
+              security.
+            </div>
+          </details>
+
+          <!-- FAQ 10 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              10. Is there technical support if I face platform issues?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              Yes, we provide robust technical support. You can reach out to our helpdesk via email, phone, or live chat
+              within the LMS for any assistance related to platform access or connectivity.
+            </div>
+          </details>
+
+          <!-- FAQ 11 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              11. How interactive is the LMS experience?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              Our LMS is designed to be highly engaging. It includes features like interactive quizzes, peer-to-peer
+              discussion boards, gamified learning elements, and real-time feedback from instructors.
+            </div>
+          </details>
+
+          <!-- FAQ 12 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              12. Will I receive faculty mentoring?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              Yes, every learner is assigned a dedicated faculty mentor and a "Batch Owner" who provides guidance on
+              academic progress, career planning, and elective selection.
+            </div>
+          </details>
+
+          <!-- FAQ 13 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              13. How can I get my qualifications evaluated for international immigration?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              JAIN Online degrees are recognized by WES (World Education Services) and other global evaluation bodies,
+              facilitating easy credit transfers and qualification recognition for immigration to countries like the USA
+              and Canada.
+            </div>
+          </details>
+
+          <!-- FAQ 14 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              14. What are Micro-Credential Courses (MCCs)?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              MCCs are short, specialized courses focused on high-demand skills (like AI, Fintech, or Data Science).
+              They are integrated into your degree to provide practical, industry-specific expertise that makes you
+              stand out to employers.
+            </div>
+          </details>
+
+          <!-- FAQ 15 -->
+          <details class="group bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <summary
+              class="flex justify-between items-center font-bold font-heading text-lg cursor-pointer list-none p-6 text-primary group-open:text-primary">
+              15. Who delivers the Micro-Credential Courses?
+              <span class="transition group-open:rotate-180">
+                <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+                  <path d="M6 9l6 6 6-6"></path>
+                </svg>
+              </span>
+            </summary>
+            <div class="text-gray-600 px-6 pb-6 leading-relaxed">
+              MCCs are delivered by top industry practitioners and global experts from world-leading organizations,
+              ensuring you gain insights that are directly applicable in the modern workplace.
+            </div>
+          </details>
+        </div>
+
+        <div class="flex justify-center mt-12">
+          <button id="toggle-faqs"
+            class="inline-flex items-center gap-2 bg-primary text-white rounded-full px-8 py-4 font-sans text-base font-semibold transition-all shadow-lg active:scale-[0.98]">
+            <span id="toggle-text">View All FAQs</span>
+            <svg id="toggle-icon" class="w-5 h-5 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-primary text-gray-300 py-8 mt-auto">
+    <div class="max-w-7xl px-4 mx-auto text-center flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-sm font-medium">
+        &copy; <span id="year"></span> JAIN Online. All rights reserved.
+      </p>
+      <div class="flex gap-6 text-sm">
+        <a href="#" class="hover:text-secondary transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-secondary transition-colors">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Toggle Logic
+    const toggleBtn = document.getElementById('toggle-faqs');
+    const extraFaqs = document.getElementById('extra-faqs');
+    const toggleText = document.getElementById('toggle-text');
+    const toggleIcon = document.getElementById('toggle-icon');
+
+    if (toggleBtn && extraFaqs) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = extraFaqs.classList.contains('hidden');
+        if (isHidden) {
+          extraFaqs.classList.remove('hidden');
+          toggleText.textContent = 'Show Less';
+          toggleIcon.style.transform = 'rotate(180deg)';
+        } else {
+          extraFaqs.classList.add('hidden');
+          toggleText.textContent = 'View All FAQs';
+          toggleIcon.style.transform = 'rotate(0deg)';
+          document.getElementById('faq-container').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal-element').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+
+</html>
