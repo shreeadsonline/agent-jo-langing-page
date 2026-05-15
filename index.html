@@ -1791,11 +1791,205 @@
     </div>
 
     <!-- Sub Footer -->
-    <div class="max-w-7xl px-4 sm:px-6 mx-auto mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-400 text-center sm:text-left">
+    <div class="container px-4 sm:px-12 mx-auto mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-gray-400 text-center sm:text-left">
       <p>&copy; <span id="year"></span> Degree Explorer. All rights reserved.</p>
       <p>Authorized Marketing Partner of Jain Online</p>
     </div>
   </footer>
+
+  <!-- ================= APPLICATION MODAL ================= -->
+  <div id="applicationModal" class="fixed inset-0 z-[100] hidden">
+    <!-- Backdrop -->
+    <div id="modalBackdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+    <!-- Modal Content -->
+    <div class="relative h-full flex items-center justify-center p-4 overflow-y-auto">
+      <div class="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl my-8">
+        <!-- Close Button -->
+        <button id="closeApplicationModal" type="button"
+          class="absolute top-5 right-5 w-9 h-9 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-900 hover:bg-gray-100 transition-all z-20 cursor-pointer"
+          aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+
+        <!-- Step 1: Basic Information -->
+        <div id="modalStep1" class="p-8 lg:p-12">
+          <div class="space-y-8">
+            <div class="space-y-2">
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-base font-bold">1</span>
+                <h3 class="text-xl lg:text-2xl font-bold font-heading text-primary">Apply Now</h3>
+              </div>
+              <p class="text-gray-500 text-base flex items-start gap-2">
+                <span
+                  class="w-2 h-2 rounded-full bg-red-600 mt-2 shadow-[0_0_12px_rgba(220,38,38,0.6)] ring-2 ring-red-100 animate-pulse"></span>
+                Few Seats Left, Classes start on July, 2026
+              </p>
+            </div>
+
+            <form id="step1Form" class="space-y-4">
+              <input required type="text" id="step1Name" name="name" placeholder="Your Name"
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm placeholder:text-gray-400" />
+
+              <input required type="email" id="step1Email" name="email" placeholder="Email"
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm placeholder:text-gray-400" />
+
+              <input required type="tel" id="step1Phone" name="phone" placeholder="Phone No." pattern="[0-9]{10}"
+                class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-sm placeholder:text-gray-400" />
+
+              <div class="relative">
+                <select required id="step1Experience" name="experience"
+                  class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-700 text-sm appearance-none cursor-pointer">
+                  <option value="" disabled selected>Work Experience</option>
+                  <option value="YEARS01">0-1 Years</option>
+                  <option value="YEARS24">2-4 Years</option>
+                  <option value="YEARS46">4-6 Years</option>
+                  <option value="YEARS710">7-10 Years</option>
+                  <option value="YEARS10PLUS">10+ Years</option>
+                </select>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none">
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </div>
+
+              <button type="submit"
+                class="w-full bg-primary text-white hover:bg-primary/90 py-3 font-bold text-sm lg:text-base rounded-lg transition-all flex items-center justify-center gap-2 group cursor-pointer">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 group-hover:translate-x-1 transition-transform">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Step 2: Additional Details -->
+        <div id="modalStep2" class="p-8 lg:p-12 hidden">
+          <div class="space-y-8">
+            <div class="space-y-2">
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-base font-bold">2</span>
+                <h3 class="text-xl lg:text-2xl font-bold font-heading text-primary">Complete Your Application</h3>
+              </div>
+              <p class="text-gray-500 text-base">Please provide your eligibility details to complete the application.</p>
+            </div>
+
+            <form id="step2Form" class="space-y-4">
+              <div class="space-y-2">
+                <label class="text-xs font-bold text-gray-400 tracking-widest uppercase">Program</label>
+                <div class="relative">
+                  <select required id="modalProgram" name="program"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-700 text-sm font-medium appearance-none cursor-pointer">
+                    <option value="" disabled selected>Select Program</option>
+                    <option value="mba">MBA - Master of Business Administration</option>
+                    <option value="mca">MCA - Master of Computer Applications</option>
+                    <option value="mcom">M.COM - Master of Commerce</option>
+                    <option value="ma">MA - Master of Arts</option>
+                    <option value="bba">BBA - Bachelor of Business Administration</option>
+                    <option value="bca">BCA - Bachelor of Computer Applications</option>
+                    <option value="bcom">B.COM - Bachelor of Commerce</option>
+                  </select>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-xs font-bold text-gray-400 tracking-widest uppercase">Highest Qualification</label>
+                <div class="relative">
+                  <select required id="qualification" name="qualification"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-700 text-sm font-medium appearance-none cursor-pointer">
+                    <option value="" disabled selected>Select Qualification</option>
+                    <option value="B.Tech/BE(any)">B.Tech/BE (any)</option>
+                    <option value="BSc(any)">BSc (any)</option>
+                    <option value="BBA">BBA</option>
+                    <option value="B.Com">B.Com</option>
+                    <option value="BA">BA</option>
+                    <option value="MSc(any)">MSc (any)</option>
+                    <option value="MCA(any)">MCA</option>
+                    <option value="MBA">MBA</option>
+                    <option value="M.Com">M.Com</option>
+                    <option value="MA">MA</option>
+                    <option value="Phd(any)">PhD (any)</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-xs font-bold text-gray-400 tracking-widest uppercase">Your Current Professional Situation?</label>
+                <div class="relative">
+                  <select required id="situation" name="situation"
+                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-gray-700 text-sm font-medium appearance-none cursor-pointer">
+                    <option value="" disabled selected>Select Situation</option>
+                    <option value="Employed">Employed</option>
+                    <option value="Intern">Intern</option>
+                    <option value="Self-employed">Self-employed</option>
+                    <option value="Freelancer">Freelancer</option>
+                    <option value="Student">Student</option>
+                    <option value="Between Jobs">Between Jobs</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+              </div>
+
+              <button type="submit"
+                class="w-full bg-primary text-white hover:bg-primary/90 py-3 font-bold text-sm lg:text-base rounded-lg transition-all flex items-center justify-center gap-2 group cursor-pointer">
+                Submit Final Application
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="w-4 h-4 group-hover:scale-110 transition-transform">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Success State -->
+        <div id="modalSuccess" class="p-8 lg:p-12 hidden text-center">
+          <div class="mx-auto w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+          </div>
+          <h3 class="text-xl lg:text-2xl font-bold font-heading text-primary mb-2">Application Submitted!</h3>
+          <p class="text-gray-500 text-base mb-6">Our counsellor will reach out to you within 24 hours.</p>
+          <button type="button" id="closeApplicationModalDone"
+            class="inline-flex items-center justify-center gap-2 bg-primary text-white hover:bg-primary/90 px-8 py-3 font-bold text-sm rounded-lg transition-all">
+            Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     // FAQ Toggle Logic
@@ -1840,6 +2034,64 @@
     document.querySelectorAll('.reveal-element').forEach((el) => {
       observer.observe(el);
     });
+
+    // Application Modal Logic
+    (function () {
+      const modal = document.getElementById('applicationModal');
+      const backdrop = document.getElementById('modalBackdrop');
+      const closeBtn = document.getElementById('closeApplicationModal');
+      const closeDoneBtn = document.getElementById('closeApplicationModalDone');
+      const step1 = document.getElementById('modalStep1');
+      const step2 = document.getElementById('modalStep2');
+      const success = document.getElementById('modalSuccess');
+      const step1Form = document.getElementById('step1Form');
+      const step2Form = document.getElementById('step2Form');
+
+      if (!modal) return;
+
+      function showStep(stepEl) {
+        [step1, step2, success].forEach(el => el.classList.add('hidden'));
+        stepEl.classList.remove('hidden');
+      }
+
+      function openModal() {
+        showStep(step1);
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+        step1Form.reset();
+        step2Form.reset();
+        showStep(step1);
+      }
+
+      document.querySelectorAll('a[href="#applyNow"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          openModal();
+        });
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      closeDoneBtn.addEventListener('click', closeModal);
+      backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      });
+
+      step1Form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showStep(step2);
+      });
+
+      step2Form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showStep(success);
+      });
+    })();
   </script>
 </body>
 
