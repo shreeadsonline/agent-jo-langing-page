@@ -2232,7 +2232,7 @@
       step2Form.addEventListener('submit', (e) => {
         e.preventDefault();
         window.LeadCapture.captureStep(2, step2Form);
-        showStep(success);
+        window.location.href = 'thank-you.html';
       });
     })();
   </script>
