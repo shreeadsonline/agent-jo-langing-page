@@ -3,8 +3,10 @@
 
   var TERMS_HTML = `
     <h4 class="text-base font-bold text-primary">1. About the Platform</h4>
-    <p>Grow Rankings is an independent educational counselling and information platform. We provide counselling support and publicly available information regarding online degree programs offered by universities.</p>
-    <p>We do not guarantee admissions, placements, scholarships, or university approvals.</p>
+    <P>Last Updated: May 2026<P>
+    <P>By accessing or using JainOnlineLearning.in, you agree to comply with these Terms & Conditions.<P>
+    <p>JainOnlinelearning.in is operated by Grow Rankings, an independent education counselling and information platform.</p>
+    <p>We provide publicly available information and counselling support related to online degree programs. We do not guarantee admissions, placements, scholarships, or university approvals.</p>
 
     <h4 class="text-base font-bold text-primary">2. Independent Platform Disclaimer</h4>
     <p>Grow Rankings is not the official website of Jain University or any other university unless explicitly stated.</p>
@@ -66,23 +68,27 @@
 
   var ABOUT_HTML = `
     <h4 class="text-base font-bold text-primary">About Grow Rankings</h4>
-    <p>Grow Rankings is an independent education counselling and information platform.</p>
-    <p>We help students and working professionals explore online degree programs from various universities by providing transparent information, counselling support, and admission guidance.</p>
-    <p>Our goal is to simplify the decision-making process through accurate program information and personalised counselling assistance.</p>
+    <p>Welcome to Jainonlinelearning.in, an independent education counselling and information platform operated by Grow Rankings.</p>
+    <p>We help students and working professionals explore online degree programs by providing guidance related to eligibility, fees, curriculum, admission process, and career-oriented learning opportunities.</p>
+    <p>Our goal is to simplify the online education journey through transparent information and personalised counselling support.</p>
 
     <h4 class="text-base font-bold text-primary">What We Offer</h4>
     <ul class="list-disc pl-6 space-y-1">
-      <li>Program Information</li>
-      <li>Eligibility Guidance</li>
-      <li>Counselling Support</li>
+      <li>Online Program Guidance</li>
+      <p>Get information about online MBA, MCA, M.Com, and other degree programs offered by leading universities.<p>
       <li>Admission Assistance</li>
-      <li>Career-Oriented Program Exploration</li>
+      <p>Receive support regarding eligibility, application process, documentation, and admission-related queries.<p>
+      <li>Career-Oriented Counselling</li>
+      <p>Our team helps learners choose suitable programs based on academic background and career goals.<p>
+      <li>Flexible Learning Information</li>
+      <p>Understand how online learning works for students and working professionals.<p>
     </ul>
 
     <h4 class="text-base font-bold text-primary">Our Mission</h4>
     <p>To help students make informed education decisions through transparent and accessible guidance.</p>
 
     <h4 class="text-base font-bold text-primary">Important Disclaimer</h4>
+    <p>Grow Rankings is an independent education counselling and information platform. We do not represent or claim official affiliation with Jain University or any other university unless specifically stated.<p>
     <p>Grow Rankings is not the official website of Jain University or any other university unless specifically stated.</p>
     <p>All trademarks, logos, and university names belong to their respective owners.</p>
 
@@ -103,14 +109,16 @@
     <p>10:00 AM – 7:00 PM IST</p>
 
     <h4 class="text-base font-bold text-primary">Disclaimer</h4>
-    <p>Grow Rankings is an independent counselling and information platform. We do not represent or claim official affiliation with any university unless specifically stated.</p>
+    </p>jainonlinelearning.in is operated by Grow Rankings, an independent education counselling and information platform. We do not represent or claim official affiliation with Jain University.</p>
   `;
 
   var PRIVACY_HTML = `
+    <p>Your privacy is important to us. This Privacy Policy explains how JainOnlineLearning.in collects, uses, and protects user information.<p>
     <p>Welcome to Grow Rankings. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you visit our website and submit your details through enquiry forms.</p>
 
     <h4 class="text-base font-bold text-primary">1. Who We Are</h4>
-    <p>Grow Rankings is an independent education counselling and information platform operated by Grow Rankings. We provide counselling support and publicly available information related to online degree programs offered by various universities.</p>
+    <p>JainOnlinelearning.in is operated by Grow Rankings, an independent education counselling and information platform.<p>
+    <p>We provide counselling support and publicly available information related to online degree programs offered by various universities.</p>
     <p>We do not represent or claim official affiliation with any university unless explicitly mentioned.</p>
 
     <h4 class="text-base font-bold text-primary">2. Information We Collect</h4>
