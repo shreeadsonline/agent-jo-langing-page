@@ -69,6 +69,7 @@
   var ABOUT_HTML = `
     <h4 class="text-base font-bold text-primary">About Grow Rankings</h4>
     <p>Welcome to Jainonlinelearning.in, an independent education counselling and information platform operated by Grow Rankings.</p>
+    <p>Grow Rankings is a Bangalore-based digital marketing and education counselling agency. We partner with universities and EdTech institutions to help prospective students find the right programs. We are an authorized marketing partner of JAIN Online through USDC. We do not admit students directly — all admissions are processed by JAIN Online.</p>
     <p>We help students and working professionals explore online degree programs by providing guidance related to eligibility, fees, curriculum, admission process, and career-oriented learning opportunities.</p>
     <p>Our goal is to simplify the online education journey through transparent information and personalised counselling support.</p>
 
